@@ -3,7 +3,7 @@ module TB_wire_use(
 );
 
     // DUT inst
-    wire_use u_wire_not_use(
+    wire_use u_wire_use(
         .A_i    ( A_i ),
         .B_i    ( B_i ),
         .D_i    ( D_i ),
