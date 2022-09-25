@@ -16,5 +16,13 @@ module TB_four_bit_full_adder (
         .C_o ( C_o )
     );
 
+    initial begin
+        #0
+        
+        #5
+        
+        #5
+    end
+
 
 endmodule
