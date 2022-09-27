@@ -1,6 +1,13 @@
+`timescale 1ps/1ps
+
 module TB_wire_not_use(
     // TB don't have any I/O port
 );
+
+    reg     A_i;
+    reg     B_i;
+    reg     D_i;
+    wire    E_o;
 
     // DUT inst
     wire_not_use u_wire_not_use(

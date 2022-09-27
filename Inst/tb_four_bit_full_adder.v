@@ -18,11 +18,17 @@ module TB_four_bit_full_adder (
 
     initial begin
         #0
-        
+            A_i = 'd10;
+            B_i = 'd5;
+            C_i = 'd0;
         #5
-        
+            A_i = 'd3;
+            B_i = 'd7;
+            C_i = 'd0;
         #5
+            A_i = 'd2;
+            B_i = 'd3;
+            C_i = 'd0;
     end
-
 
 endmodule
