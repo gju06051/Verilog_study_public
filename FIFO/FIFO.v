@@ -1,6 +1,6 @@
 module FIFO #(
     parameter DATA_WIDTH = 8,
-    parameter FIFO_DEPTH = 8
+    parameter FIFO_DEPTH = 8    //  2, 4, 8 ... 
     )(
     input                       clk,
     input                       rst_n,
@@ -49,9 +49,9 @@ module FIFO #(
     assign rdata_o = mem[rdptr[FIFO_DEPTH_LG2-1:0]];
     
     // Full & empty check
-    assign empty_o = (wrptr==rdptr);
-    assign full_o = (wrptr[FIFO_DEPTH_LG2-1:0]==rdptr[FIFO_DEPTH_LG2-1:0]) & 
-                    (wrptr[FIFO_DEPTH_LG2] != rdptr[FIFO_DEPTH_LG2]);
+    assign empty_o  =   (wrptr==rdptr);
+    assign full_o   =   (wrptr[FIFO_DEPTH_LG2-1:0]==rdptr[FIFO_DEPTH_LG2-1:0]) & 
+                        (wrptr[FIFO_DEPTH_LG2] != rdptr[FIFO_DEPTH_LG2]);
 
 
 endmodule
